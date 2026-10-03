@@ -1,4 +1,4 @@
-# SentinelAI
+# IndusEye
 
 Real-time surveillance incident-indicator prototype. It detects visual objects, not crimes, intent, or legality. The MVP classes are `person`, `knife`, and `gun`; knife is the priority. Stage 1's video-quality and preprocessing code is retained under `video/`.
 
