@@ -1,0 +1,9 @@
+condition,n_frames,detections,faces_blurred,preprocessing_latency_ms,inference_latency_ms,privacy_latency_ms,end_to_end_latency_ms,fps,precision,recall,mAP50,mAP50_95,metric_note
+clean,1,0,0,0.353,45.245,58.816,104.437,9.58,,,,,Runtime-only measurement; no local labelled fine-tuned evaluation set/checkpoint.
+clean+preprocess,1,0,0,9.964,48.82,57.338,116.137,8.61,,,,,Runtime-only measurement; no local labelled fine-tuned evaluation set/checkpoint.
+low_light,1,0,0,0.417,46.103,57.171,103.702,9.64,,,,,Runtime-only measurement; no local labelled fine-tuned evaluation set/checkpoint.
+low_light+preprocess,1,0,0,32.318,45.625,55.79,133.752,7.48,,,,,Runtime-only measurement; no local labelled fine-tuned evaluation set/checkpoint.
+blur,1,0,0,0.369,50.806,58.243,109.435,9.14,,,,,Runtime-only measurement; no local labelled fine-tuned evaluation set/checkpoint.
+blur+preprocess,1,0,0,13.465,47.114,57.391,117.986,8.48,,,,,Runtime-only measurement; no local labelled fine-tuned evaluation set/checkpoint.
+noise,1,0,0,0.339,45.136,57.555,103.045,9.7,,,,,Runtime-only measurement; no local labelled fine-tuned evaluation set/checkpoint.
+noise+preprocess,1,0,0,12.326,51.216,52.839,116.4,8.59,,,,,Runtime-only measurement; no local labelled fine-tuned evaluation set/checkpoint.

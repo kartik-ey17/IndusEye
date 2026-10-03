@@ -1,0 +1,56 @@
+# Paths
+root: .
+dataset_dir: data/yolo
+dataset_yaml: data/yolo/sentinel.yaml
+weights_out: models/best.pt
+pretrained: yolo11n.pt
+fallback_pretrained: yolo11n.pt
+
+# Classes used by SentinelAI (MVP incident indicators)
+names:
+  0: person
+  1: knife
+  2: gun
+
+# Architecture / transfer learning
+model: yolo11n.pt
+imgsz: 640
+epochs: 25
+batch: 8
+patience: 8
+seed: 42
+workers: 2
+device: 0
+optimizer: auto
+lr0: 0.01
+lrf: 0.01
+weight_decay: 0.0005
+warmup_epochs: 3.0
+close_mosaic: 8
+
+# Surveillance-oriented augmentation (see ml/README.md for why)
+hsv_h: 0.015
+hsv_s: 0.70          # saturation / contrast-like variation
+hsv_v: 0.55          # brightness / low-light
+degrees: 8.0         # small camera tilt
+translate: 0.12
+scale: 0.55          # subject distance / zoom
+shear: 2.0
+perspective: 0.0
+flipud: 0.0          # CCTV is rarely upside down
+fliplr: 0.5
+mosaic: 0.85
+mixup: 0.10
+copy_paste: 0.05
+erasing: 0.35        # occlusion (hand, overlay, object)
+crop_fraction: 1.0
+
+# Inference
+conf: 0.25
+iou: 0.50
+max_det: 50
+
+# Privacy-first incident workflow (read by incidents.pipeline)
+incident:
+  weapon_confidence_threshold: 0.50
+  cooldown_seconds: 8.0

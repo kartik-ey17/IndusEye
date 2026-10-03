@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+
+# Media / data dumps
+data/samples/*.jpg
+data/samples/*.png
+data/samples/*.mp4
+!data/samples/.gitkeep
+data/yolo/
+data/raw/
+data/robustness/
+runs/
+
+# Cache / experiment trackers
+*.cache
+wandb/
+
+# Optional extra weight dumps; keep the shipped fine-tune
+models/*.onnx
+models/*.engine
+models/*.pt
+!models/best.pt
+!models/.gitkeep
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/.env.local
+frontend/.env*.local
+!frontend/.env.local.example
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/pnpm-debug.log*
+frontend/.vercel/
